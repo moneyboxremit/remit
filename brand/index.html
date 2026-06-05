@@ -60,8 +60,8 @@
   .grid{display:grid;gap:20px}
   .g2{grid-template-columns:repeat(2,1fr)}
   .g3{grid-template-columns:repeat(3,1fr)}
-  .card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg)}
-  .stage{display:flex;align-items:center;justify-content:center;padding:54px 30px;min-height:200px;background:var(--panel)}
+  .card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg);display:flex;flex-direction:column;height:100%}
+  .stage{display:flex;align-items:center;justify-content:center;padding:54px 30px;min-height:200px;background:var(--panel);flex:1 1 auto}
   .stage.dark{background:linear-gradient(135deg,var(--brand) 0%,var(--brand-dark) 100%)}
   .stage.tint{background:var(--brand-soft)}
   .stage img{max-height:90px;width:auto}
@@ -72,6 +72,12 @@
   .card .cap .dl{font-size:.82rem;font-weight:700;color:var(--brand);white-space:nowrap}
   .tag{font-size:.7rem;font-weight:800;letter-spacing:.05em;padding:4px 9px;border-radius:6px;background:var(--panel);color:var(--ink-soft);border:1px solid var(--line)}
   .tag.dark-tag{background:rgba(255,255,255,.16);color:#fff;border-color:rgba(255,255,255,.25)}
+  .dls{display:flex;gap:6px;flex:0 0 auto}
+  .dls a{font-size:.72rem;font-weight:800;letter-spacing:.02em;padding:6px 12px;border-radius:999px;border:1px solid var(--line);
+    color:var(--brand-dark);background:var(--bg);transition:.12s;white-space:nowrap}
+  .dls a:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .dls a.svg{color:var(--ink-soft)}
+  .dls a.svg:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
 
   /* ===== Symbol clearspace ===== */
   .clearspace{position:relative;display:inline-block;padding:64px;background:var(--panel);border-radius:var(--radius)}
@@ -113,6 +119,13 @@
   .btn.ghost{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
   .btn.ghost:hover{border-color:var(--brand);color:var(--brand)}
 
+  .dlmatrix{margin-top:18px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .dlmatrix .row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 20px;border-bottom:1px solid var(--line)}
+  .dlmatrix .row:last-child{border-bottom:0}
+  .dlmatrix .row:nth-child(even){background:var(--panel)}
+  .dlmatrix .row .nm{font-weight:800;flex:1 1 200px;min-width:150px}
+  .dlmatrix .grp{display:flex;align-items:center;gap:8px}
+  .dlmatrix .grp .lbl{font-size:.76rem;color:var(--ink-soft);font-weight:800;min-width:44px}
   .usage{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
   .usage .col{border:1px solid var(--line);border-radius:14px;padding:18px 20px}
   .usage h4{margin:0 0 10px;font-size:.95rem;font-weight:800}
@@ -202,15 +215,18 @@
       <div class="grid g3" style="margin-top:26px">
         <div class="card">
           <div class="stage lg"><img src="assets/symbol.png" alt="심볼 마크" /></div>
-          <div class="cap"><span class="nm">심볼 마크</span><span class="tag">Symbol</span></div>
+          <div class="cap"><span class="nm">심볼 마크</span>
+            <span class="dls"><a href="assets/symbol.png" download>PNG</a><a class="svg" href="assets/symbol.svg" download>SVG</a></span></div>
         </div>
         <div class="card">
           <div class="stage"><img src="assets/horizontal-full.png" alt="가로형 풀 로고" /></div>
-          <div class="cap"><span class="nm">가로형 (풀)</span><span class="tag">Horizontal</span></div>
+          <div class="cap"><span class="nm">가로형 (풀)</span>
+            <span class="dls"><a href="assets/horizontal-full.png" download>PNG</a><a class="svg" href="assets/horizontal-full.svg" download>SVG</a></span></div>
         </div>
         <div class="card">
           <div class="stage"><img src="assets/stacked.png" alt="세로형 로고" /></div>
-          <div class="cap"><span class="nm">세로형</span><span class="tag">Stacked</span></div>
+          <div class="cap"><span class="nm">세로형</span>
+            <span class="dls"><a href="assets/stacked.png" download>PNG</a><a class="svg" href="assets/stacked.svg" download>SVG</a></span></div>
         </div>
       </div>
     </section>
@@ -224,11 +240,13 @@
       <div class="grid g2" style="margin-top:24px">
         <div class="card">
           <div class="stage lg tint"><img src="assets/symbol.png" alt="심볼 - 라이트" /></div>
-          <div class="cap"><span class="nm">라이트 배경</span><span class="tag">Primary</span></div>
+          <div class="cap"><span class="nm">라이트 배경 · 컬러</span>
+            <span class="dls"><a href="assets/symbol.png" download>PNG</a><a class="svg" href="assets/symbol.svg" download>SVG</a></span></div>
         </div>
         <div class="card">
-          <div class="stage lg dark"><img src="assets/symbol.png" alt="심볼 - 다크" /></div>
-          <div class="cap"><span class="nm">컬러 배경</span><span class="tag dark-tag" style="background:var(--panel);color:var(--ink-soft);border-color:var(--line)">Symbol</span></div>
+          <div class="stage lg dark"><img src="assets/symbol-dark.png" alt="심볼 - 화이트 반전" /></div>
+          <div class="cap"><span class="nm">컬러 배경 · 화이트</span>
+            <span class="dls"><a href="assets/symbol-dark.png" download>PNG</a><a class="svg" href="assets/symbol-dark.svg" download>SVG</a></span></div>
         </div>
       </div>
     </section>
@@ -243,24 +261,28 @@
       <h3 class="sub">가로형 — 풀 워드마크</h3>
       <div class="card">
         <div class="stage" style="min-height:150px"><img src="assets/horizontal-full.png" alt="MONEYBOX Remit 가로형" style="max-height:64px" /></div>
-        <div class="cap"><span class="nm">MONEYBOX&nbsp;Remit · 가로형</span><a class="dl" href="assets/horizontal-full.png" download>PNG ↓</a></div>
+        <div class="cap"><span class="nm">MONEYBOX&nbsp;Remit · 가로형</span>
+          <span class="dls"><a href="assets/horizontal-full.png" download>PNG</a><a class="svg" href="assets/horizontal-full.svg" download>SVG</a></span></div>
       </div>
 
       <h3 class="sub">가로형 — Remit 단축형</h3>
       <div class="card">
         <div class="stage sm"><img src="assets/horizontal-remit.png" alt="Remit 단축형" /></div>
-        <div class="cap"><span class="nm">Remit · 단축형</span><a class="dl" href="assets/horizontal-remit.png" download>PNG ↓</a></div>
+        <div class="cap"><span class="nm">Remit · 단축형</span>
+          <span class="dls"><a href="assets/horizontal-remit.png" download>PNG</a><a class="svg" href="assets/horizontal-remit.svg" download>SVG</a></span></div>
       </div>
 
       <h3 class="sub">세로형</h3>
       <div class="grid g2">
         <div class="card">
           <div class="stage"><img src="assets/stacked.png" alt="세로형 라이트" style="max-height:130px" /></div>
-          <div class="cap"><span class="nm">세로형 · 라이트</span><a class="dl" href="assets/stacked.png" download>PNG ↓</a></div>
+          <div class="cap"><span class="nm">세로형 · 라이트</span>
+            <span class="dls"><a href="assets/stacked.png" download>PNG</a><a class="svg" href="assets/stacked.svg" download>SVG</a></span></div>
         </div>
         <div class="card">
           <div class="stage dark"><img src="assets/stacked-dark.png" alt="세로형 다크" style="max-height:130px" /></div>
-          <div class="cap"><span class="nm">세로형 · 다크</span><a class="dl" href="assets/stacked-dark.png" download>PNG ↓</a></div>
+          <div class="cap"><span class="nm">세로형 · 다크</span>
+            <span class="dls"><a href="assets/stacked-dark.png" download>PNG</a><a class="svg" href="assets/stacked-dark.svg" download>SVG</a></span></div>
         </div>
       </div>
     </section>
@@ -274,19 +296,23 @@
       <div class="grid g2" style="margin-top:24px">
         <div class="card">
           <div class="stage"><img src="assets/horizontal-full.png" alt="라이트 배경 로고" style="max-height:58px" /></div>
-          <div class="cap"><span class="nm">밝은 배경 → 컬러</span><span class="tag">Light</span></div>
+          <div class="cap"><span class="nm">밝은 배경 → 컬러</span>
+            <span class="dls"><a href="assets/horizontal-full.png" download>PNG</a><a class="svg" href="assets/horizontal-full.svg" download>SVG</a></span></div>
         </div>
         <div class="card">
           <div class="stage dark"><img src="assets/horizontal-full-dark.png" alt="다크 배경 로고" style="max-height:58px" /></div>
-          <div class="cap"><span class="nm">컬러·어두운 배경 → 화이트</span><span class="tag">Reversed</span></div>
+          <div class="cap"><span class="nm">어두운 배경 → 화이트</span>
+            <span class="dls"><a href="assets/horizontal-full-dark.png" download>PNG</a><a class="svg" href="assets/horizontal-full-dark.svg" download>SVG</a></span></div>
         </div>
         <div class="card">
           <div class="stage tint"><img src="assets/horizontal-remit.png" alt="틴트 배경 로고" /></div>
-          <div class="cap"><span class="nm">연한 블루 → 컬러</span><span class="tag">Tint</span></div>
+          <div class="cap"><span class="nm">연한 블루 → 컬러</span>
+            <span class="dls"><a href="assets/horizontal-remit.png" download>PNG</a><a class="svg" href="assets/horizontal-remit.svg" download>SVG</a></span></div>
         </div>
         <div class="card">
           <div class="stage dark"><img src="assets/horizontal-remit-dark.png" alt="다크 배경 Remit" /></div>
-          <div class="cap"><span class="nm">브랜드 블루 → 화이트</span><span class="tag">Reversed</span></div>
+          <div class="cap"><span class="nm">브랜드 블루 → 화이트</span>
+            <span class="dls"><a href="assets/horizontal-remit-dark.png" download>PNG</a><a class="svg" href="assets/horizontal-remit-dark.svg" download>SVG</a></span></div>
         </div>
       </div>
     </section>
@@ -300,7 +326,8 @@
       <div class="grid g3" style="margin-top:24px">
         <div class="card">
           <div class="stage" style="padding:30px"><img src="assets/app-icon.png" alt="앱 아이콘" style="max-height:150px;border-radius:28px" /></div>
-          <div class="cap"><span class="nm">App Icon</span><a class="dl" href="assets/app-icon.png" download>PNG ↓</a></div>
+          <div class="cap"><span class="nm">App Icon</span>
+            <span class="dls"><a href="assets/app-icon.png" download>PNG</a></span></div>
         </div>
         <div class="card">
           <div class="stage" style="padding:36px"><img src="assets/app-icon.png" alt="앱 아이콘 중간" style="max-height:96px;border-radius:20px" /></div>
@@ -418,7 +445,7 @@
     <section id="download">
       <div class="eyebrow">09 — Assets</div>
       <h2 class="title">에셋 다운로드</h2>
-      <p class="lead">아래에서 개별 PNG를 내려받을 수 있습니다.</p>
+      <p class="lead">아래에서 형태별로 <b>PNG·SVG</b>를 내려받을 수 있습니다. SVG는 무한 확대해도 깨지지 않는 벡터 파일입니다.</p>
       <div class="usage">
         <div class="col ok">
           <h4>권장</h4>
@@ -437,14 +464,31 @@
           </ul>
         </div>
       </div>
-      <div class="dlbar">
-        <a class="btn ghost" href="assets/symbol.png" download>심볼 PNG</a>
-        <a class="btn ghost" href="assets/horizontal-remit.png" download>가로형 Remit</a>
-        <a class="btn ghost" href="assets/horizontal-full.png" download>가로형 풀</a>
-        <a class="btn ghost" href="assets/stacked.png" download>세로형</a>
-        <a class="btn ghost" href="assets/horizontal-full-dark.png" download>가로형 풀 (화이트)</a>
-        <a class="btn ghost" href="assets/stacked-dark.png" download>세로형 (화이트)</a>
-        <a class="btn primary" href="assets/app-icon.png" download>앱 아이콘 ↓</a>
+      <div class="dlmatrix">
+        <div class="row">
+          <span class="nm">심볼 마크</span>
+          <span class="grp"><span class="lbl">컬러</span><span class="dls"><a href="assets/symbol.png" download>PNG</a><a class="svg" href="assets/symbol.svg" download>SVG</a></span></span>
+          <span class="grp"><span class="lbl">화이트</span><span class="dls"><a href="assets/symbol-dark.png" download>PNG</a><a class="svg" href="assets/symbol-dark.svg" download>SVG</a></span></span>
+        </div>
+        <div class="row">
+          <span class="nm">가로형 — Remit</span>
+          <span class="grp"><span class="lbl">컬러</span><span class="dls"><a href="assets/horizontal-remit.png" download>PNG</a><a class="svg" href="assets/horizontal-remit.svg" download>SVG</a></span></span>
+          <span class="grp"><span class="lbl">화이트</span><span class="dls"><a href="assets/horizontal-remit-dark.png" download>PNG</a><a class="svg" href="assets/horizontal-remit-dark.svg" download>SVG</a></span></span>
+        </div>
+        <div class="row">
+          <span class="nm">가로형 — 풀</span>
+          <span class="grp"><span class="lbl">컬러</span><span class="dls"><a href="assets/horizontal-full.png" download>PNG</a><a class="svg" href="assets/horizontal-full.svg" download>SVG</a></span></span>
+          <span class="grp"><span class="lbl">화이트</span><span class="dls"><a href="assets/horizontal-full-dark.png" download>PNG</a><a class="svg" href="assets/horizontal-full-dark.svg" download>SVG</a></span></span>
+        </div>
+        <div class="row">
+          <span class="nm">세로형</span>
+          <span class="grp"><span class="lbl">컬러</span><span class="dls"><a href="assets/stacked.png" download>PNG</a><a class="svg" href="assets/stacked.svg" download>SVG</a></span></span>
+          <span class="grp"><span class="lbl">화이트</span><span class="dls"><a href="assets/stacked-dark.png" download>PNG</a><a class="svg" href="assets/stacked-dark.svg" download>SVG</a></span></span>
+        </div>
+        <div class="row">
+          <span class="nm">앱 아이콘</span>
+          <span class="grp"><span class="lbl">아이콘</span><span class="dls"><a href="assets/app-icon.png" download>PNG</a></span></span>
+        </div>
       </div>
     </section>
 
