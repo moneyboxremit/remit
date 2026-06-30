@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>머니박스레밋 — 외국인 생활 허브 (초안3)</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/symbol.svg" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/css/v2.css" />
+  <style>
+    .heroH{position:relative;overflow:hidden;background:radial-gradient(900px 480px at 90% -10%,#0e8d83 0,transparent 55%),linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;padding:56px 0 44px}
+    .heroH .in{display:grid;grid-template-columns:1fr .85fr;gap:34px;align-items:center}
+    .heroH h1{font-size:40px;font-weight:900;letter-spacing:-1.1px;line-height:1.16}
+    .heroH h1 .hl{background:linear-gradient(120deg,#7ab0ff,var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .heroH p{color:#c4d0e6;font-size:17px;margin-top:12px}
+    .qbox{background:#fff;border-radius:22px;padding:22px;box-shadow:var(--shadow-lg);color:var(--ink)}
+    .qbox h3{font-size:15px;color:var(--soft);font-weight:700;margin-bottom:10px}
+    .qrow{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin-bottom:10px}
+    .qrow .v{font-size:22px;font-weight:900}
+    .qbtn{background:linear-gradient(135deg,var(--brand),var(--brand-d));color:#fff;border-radius:14px;text-align:center;padding:14px;font-weight:800;font-size:16px;display:block}
+    @media(max-width:920px){.heroH .in{grid-template-columns:1fr}.heroH h1{font-size:30px}}
+    .launch{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+    @media(max-width:920px){.launch{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:520px){.launch{grid-template-columns:repeat(2,1fr)}}
+    .tile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 12px;text-align:center;transition:transform .15s,box-shadow .15s,border-color .15s}
+    .tile:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cfe0ff}
+    .tile .ic{width:52px;height:52px;border-radius:15px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:26px;background:linear-gradient(135deg,#eaf1ff,#def6f3)}
+    .tile b{display:block;font-size:14.5px;font-weight:800}
+    .tile small{color:var(--soft);font-size:11.5px}
+    .langchips{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+    .langchips span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:5px 12px;font-size:12.5px;font-weight:700;color:#dbe7ff}
+  </style>
+</head>
+<body>
+  <header class="hdr"><div class="wrap hdr__in">
+    <a class="logo" href="#"><img src="assets/img/horizontal-remit.svg" alt="MoneyBox Remit" /></a>
+    <nav class="nav"><a href="#launch"><span data-lang-ko>서비스</span><span data-lang-en>Services</span></a><a href="v2.html"><span data-lang-ko>해외송금</span><span data-lang-en>Remittance</span></a><a href="rates.html"><span data-lang-ko>요금</span><span data-lang-en>Pricing</span></a></nav>
+    <div class="hdr__act"><button class="lang" id="langBtn" type="button">EN</button><a class="btn btn--primary btn--sm" href="download.html"><span data-lang-ko>앱 다운로드</span><span data-lang-en>Download</span></a><button class="menu-btn" id="menuBtn">&#9776;</button></div>
+  </div></header>
+  <div class="mnav" id="mnav"><div class="mnav__p"><button class="mnav__x" id="mnavX">&times;</button><a href="#launch">서비스</a><a href="v2.html">해외송금</a><a href="rates.html">요금</a><a href="download.html">앱 다운로드</a></div></div>
+
+  <section class="heroH"><div class="wrap in">
+    <div>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#dbe7ff;border:1px solid rgba(255,255,255,.2)"><span data-lang-ko>외국인 생활 허브</span><span data-lang-en>Life hub for foreigners</span></span>
+      <h1 style="margin-top:12px"><span data-lang-ko>필요한 모든 서비스,<br /><span class="hl">앱 하나에서</span></span><span data-lang-en>Every service you need,<br /><span class="hl">in one app</span></span></h1>
+      <p><span data-lang-ko>해외송금을 중심으로 환전·행정사·유심·보험까지 바로 연결.</span><span data-lang-en>Remittance at the core, plus exchange, visa, SIM, insurance.</span></p>
+      <div class="langchips"><span>한국어</span><span>EN</span><span>Tiếng Việt</span><span>नेपाली</span><span>中文</span><span>+</span></div>
+    </div>
+    <div class="qbox">
+      <h3><span data-lang-ko>지금 송금하면</span><span data-lang-en>Send now</span></h3>
+      <div class="qrow"><div><div style="font-size:11px;color:var(--soft)"><span data-lang-ko>보내는 금액</span><span data-lang-en>You send</span></div><div class="v">₩ 500,000</div></div><div style="font-weight:700">🇻🇳 VND</div></div>
+      <div class="qrow"><span style="font-size:13px;color:var(--soft)"><span data-lang-ko>수수료·환율</span><span data-lang-en>Fee &amp; rate</span></span><span style="font-size:13px;font-weight:700;color:var(--brand)"><span data-lang-ko>앱에서 실시간</span><span data-lang-en>Live in app</span></span></div>
+      <div class="qrow"><span style="font-size:13px;color:var(--soft)"><span data-lang-ko>도착 예정</span><span data-lang-en>Arrives</span></span><span style="font-size:13px;font-weight:700">~ 30 min*</span></div>
+      <a class="qbtn" href="download.html"><span data-lang-ko>앱에서 보내기</span><span data-lang-en>Send in app</span> →</a>
+      <p style="font-size:11px;color:var(--soft);margin-top:8px;text-align:center"><span data-lang-ko>*예시 · 실제 금액은 앱에서 확인</span><span data-lang-en>*example · see app</span></p>
+    </div>
+  </div></section>
+
+  <main>
+    <section class="sec" id="launch"><div class="wrap">
+      <div class="shead"><span class="ey"><span data-lang-ko>서비스</span><span data-lang-en>Services</span></span><h2><span data-lang-ko>바로 가기</span><span data-lang-en>Quick launch</span></h2></div>
+      <div class="launch">
+        <a class="tile" href="v2.html"><div class="ic">💸</div><b><span data-lang-ko>해외송금</span><span data-lang-en>Remittance</span></b><small>32 countries</small></a>
+        <a class="tile" href="#"><div class="ic">💱</div><b><span data-lang-ko>환전</span><span data-lang-en>Exchange</span></b><small><span data-lang-ko>안내 예정</span><span data-lang-en>Soon</span></small></a>
+        <a class="tile" href="#"><div class="ic">📋</div><b><span data-lang-ko>행정사</span><span data-lang-en>Visa</span></b><small><span data-lang-ko>안내 예정</span><span data-lang-en>Soon</span></small></a>
+        <a class="tile" href="#"><div class="ic">📱</div><b><span data-lang-ko>유심</span><span data-lang-en>SIM</span></b><small><span data-lang-ko>안내 예정</span><span data-lang-en>Soon</span></small></a>
+        <a class="tile" href="#"><div class="ic">🛡️</div><b><span data-lang-ko>보험</span><span data-lang-en>Insurance</span></b><small><span data-lang-ko>안내 예정</span><span data-lang-en>Soon</span></small></a>
+        <a class="tile" href="support.html"><div class="ic">💬</div><b><span data-lang-ko>고객지원</span><span data-lang-en>Support</span></b><small><span data-lang-ko>모국어</span><span data-lang-en>Your language</span></small></a>
+      </div>
+      <div class="grid3" style="margin-top:22px">
+        <a class="card hov" href="rates.html"><div class="ic">💱</div><h3><span data-lang-ko>요금·환율</span><span data-lang-en>Pricing</span></h3><p><span data-lang-ko>수수료·환율 구조와 예시.</span><span data-lang-en>Fee &amp; rate structure.</span></p></a>
+        <a class="card hov" href="countries.html"><div class="ic">🌏</div><h3><span data-lang-ko>국가별 송금</span><span data-lang-en>Countries</span></h3><p><span data-lang-ko>32개국 통화·수취·시간.</span><span data-lang-en>32 countries.</span></p></a>
+        <a class="card hov" href="security.html"><div class="ic">🛡️</div><h3><span data-lang-ko>보안·신뢰</span><span data-lang-en>Security</span></h3><p><span data-lang-ko>정식등록·사기예방.</span><span data-lang-en>Licensed &amp; safe.</span></p></a>
+      </div>
+      <div class="warn" style="max-width:760px;margin:18px auto 0"><span data-lang-ko>※ 환전·행정사·유심·보험은 그룹 서비스로 안내 페이지 순차 연결 예정.</span><span data-lang-en>※ Group services; pages soon.</span></div>
+    </div></section>
+
+    <section class="sec sec--alt" style="padding-top:0;padding-bottom:64px"><div class="wrap"><div class="ctaband">
+      <h2><span data-lang-ko>앱 하나로 다 되는 한국생활</span><span data-lang-en>Your Korea life in one app</span></h2>
+      <p><span data-lang-ko>송금부터 정착 서비스까지 한 번에.</span><span data-lang-en>Remittance to settling — all together.</span></p>
+      <a class="btn btn--light" href="download.html"><span data-lang-ko>앱 다운로드</span><span data-lang-en>Get the app</span> →</a>
+    </div></div></section>
+  </main>
+
+  <footer class="ft"><div class="wrap ft__grid">
+    <div><img src="assets/img/horizontal-remit.svg" alt="MoneyBox Remit" /><p class="ft__tag"><span data-lang-ko>외국인 생활, 앱 하나로.</span><span data-lang-en>Life for foreigners, in one app.</span></p><p style="margin-top:10px;font-size:14px"><span data-lang-ko>고객센터</span><span data-lang-en>Contact</span> <a href="tel:02-771-0000" class="ft__call" style="display:inline">02-771-0000</a></p></div>
+    <div><h4><span data-lang-ko>서비스</span><span data-lang-en>Services</span></h4><a href="v2.html">해외송금</a><a href="#">환전</a><a href="#">행정사</a><a href="#">유심</a><a href="#">보험</a></div>
+    <div><h4><span data-lang-ko>안내</span><span data-lang-en>Help</span></h4><a href="support.html">고객지원</a><a href="rates.html">요금</a><a href="security.html">보안</a></div>
+    <div><h4>More</h4><a href="https://moneyboxremit.github.io/remit/" target="_blank" rel="noopener">송금 설명서</a><a href="branches.html">지점</a></div>
+  </div><div class="wrap ft__bot"><span>© 2026 MoneyBox Remit.</span><span data-lang-ko>초안3 (검토용) · *예시</span><span data-lang-en>Draft 3 · *example</span></div></footer>
+  <span style="position:fixed;right:14px;bottom:14px;z-index:60;background:#101828;color:#fff;border-radius:999px;font-size:12px;font-weight:700;padding:8px 14px;box-shadow:var(--shadow-lg)">🅲 초안 3 · 앱 런처 허브</span>
+  <script src="assets/js/v2.js" defer></script>
+</body>
+</html>

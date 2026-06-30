@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>머니박스레밋 — 한국생활 여정 (초안2)</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/symbol.svg" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/css/v2.css" />
+  <style>
+    .heroJ{background:linear-gradient(180deg,#f6f9fd,#eaf1ff);padding:64px 0 50px}
+    .heroJ .in{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    .heroJ h1{font-size:44px;font-weight:900;letter-spacing:-1.2px;line-height:1.16;color:var(--ink)}
+    .heroJ h1 .hl{color:var(--brand)}
+    .heroJ p{color:var(--soft);font-size:18px;margin-top:14px;max-width:520px}
+    .heroJ .pic{background:linear-gradient(135deg,#1a6dff,#16d6c5);border-radius:26px;height:300px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:80px;box-shadow:var(--shadow-lg)}
+    @media(max-width:920px){.heroJ .in{grid-template-columns:1fr}.heroJ h1{font-size:32px}.heroJ .pic{height:200px;font-size:56px}}
+    .journey{position:relative;max-width:840px;margin:0 auto}
+    .jstep{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:18px 0;position:relative}
+    .jstep::before{content:"";position:absolute;left:31px;top:60px;bottom:-18px;width:2px;background:var(--line)}
+    .jstep:last-child::before{display:none}
+    .jstep .num{width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,#eaf1ff,#def6f3);display:flex;align-items:center;justify-content:center;font-size:30px;z-index:1}
+    .jbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+    .jbox h3{font-size:19px;font-weight:800}
+    .jbox .svcs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .jbox .svcs a{background:#eef4ff;color:var(--brand);border-radius:999px;padding:6px 13px;font-size:13px;font-weight:700}
+    .jbox .svcs a:hover{background:var(--brand);color:#fff}
+    .jbox p{color:var(--soft);font-size:14.5px;margin-top:4px}
+  </style>
+</head>
+<body>
+  <header class="hdr"><div class="wrap hdr__in">
+    <a class="logo" href="#"><img src="assets/img/horizontal-remit.svg" alt="MoneyBox Remit" /></a>
+    <nav class="nav"><a href="#journey"><span data-lang-ko>한국생활</span><span data-lang-en>Journey</span></a><a href="v2.html"><span data-lang-ko>해외송금</span><span data-lang-en>Remittance</span></a><a href="support.html"><span data-lang-ko>고객지원</span><span data-lang-en>Support</span></a></nav>
+    <div class="hdr__act"><button class="lang" id="langBtn" type="button">EN</button><a class="btn btn--primary btn--sm" href="download.html"><span data-lang-ko>앱 다운로드</span><span data-lang-en>Download</span></a><button class="menu-btn" id="menuBtn">&#9776;</button></div>
+  </div></header>
+  <div class="mnav" id="mnav"><div class="mnav__p"><button class="mnav__x" id="mnavX">&times;</button><a href="#journey">한국생활</a><a href="v2.html">해외송금</a><a href="support.html">고객지원</a><a href="download.html">앱 다운로드</a></div></div>
+
+  <section class="heroJ"><div class="wrap in">
+    <div>
+      <span class="badge"><span data-lang-ko>🌏 외국인 한국생활 동반자</span><span data-lang-en>🌏 Your Korea companion</span></span>
+      <h1 style="margin-top:12px"><span data-lang-ko>한국에 온 그날부터,<br /><span class="hl">정착까지 함께</span></span><span data-lang-en>From day one in Korea<br /><span class="hl">to settling in</span></span></h1>
+      <p><span data-lang-ko>유심 개통, 비자·행정, 보험, 환전, 그리고 고향 송금까지 — 단계마다 필요한 서비스를.</span><span data-lang-en>SIM, visa, insurance, exchange, and sending home — at every step.</span></p>
+      <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn--primary" href="download.html"><span data-lang-ko>앱 다운로드</span><span data-lang-en>Get the app</span> →</a><a class="btn btn--ghost" href="v2.html"><span data-lang-ko>송금 먼저 보기</span><span data-lang-en>See remittance</span></a></div>
+    </div>
+    <div class="pic">🛫🏠</div>
+  </div></section>
+
+  <main>
+    <section class="sec" id="journey"><div class="wrap">
+      <div class="shead"><span class="ey"><span data-lang-ko>한국생활 여정</span><span data-lang-en>Your journey</span></span><h2><span data-lang-ko>단계마다, 필요한 서비스</span><span data-lang-en>The right service at each step</span></h2></div>
+      <div class="journey">
+        <div class="jstep"><div class="num">📱</div><div class="jbox"><h3><span data-lang-ko>1. 도착 — 연결부터</span><span data-lang-en>1. Arrival — get connected</span></h3><p><span data-lang-ko>한국 도착 즉시 유심 개통으로 연락·앱 사용 준비.</span><span data-lang-en>Activate a SIM right away.</span></p><div class="svcs"><a href="#"><span data-lang-ko>유심(USIM)</span><span data-lang-en>SIM</span></a></div></div></div>
+        <div class="jstep"><div class="num">📋</div><div class="jbox"><h3><span data-lang-ko>2. 체류 — 비자·행정</span><span data-lang-en>2. Stay — visa &amp; admin</span></h3><p><span data-lang-ko>비자·체류 행정과 필요한 보험을 챙기세요.</span><span data-lang-en>Handle visa/admin and insurance.</span></p><div class="svcs"><a href="#"><span data-lang-ko>행정사</span><span data-lang-en>Visa &amp; Admin</span></a><a href="#"><span data-lang-ko>보험</span><span data-lang-en>Insurance</span></a></div></div></div>
+        <div class="jstep"><div class="num">💱</div><div class="jbox"><h3><span data-lang-ko>3. 생활 — 환전</span><span data-lang-en>3. Living — exchange</span></h3><p><span data-lang-ko>필요할 때 편리하게 환전.</span><span data-lang-en>Exchange currency when needed.</span></p><div class="svcs"><a href="#"><span data-lang-ko>환전</span><span data-lang-en>Exchange</span></a></div></div></div>
+        <div class="jstep"><div class="num">💸</div><div class="jbox"><h3><span data-lang-ko>4. 고향으로 — 송금 ★</span><span data-lang-en>4. Home — remittance ★</span></h3><p><span data-lang-ko>가족에게 빠르고 안전하게. 32개국·보통 10분~1시간*·모국어.</span><span data-lang-en>Fast &amp; safe to family. 32 countries, ~10min–1h*.</span></p><div class="svcs"><a href="v2.html"><span data-lang-ko>해외송금 시작 →</span><span data-lang-en>Send money →</span></a></div></div></div>
+      </div>
+      <div class="warn" style="max-width:760px;margin:18px auto 0"><span data-lang-ko>※ 유심·행정사·보험·환전은 그룹 서비스로 안내 페이지 순차 연결 예정. *도착시간 국가·시간대별 상이.</span><span data-lang-en>※ Group services; pages coming soon. *arrival varies.</span></div>
+    </div></section>
+
+    <section class="sec sec--alt"><div class="wrap"><div class="ctaband">
+      <h2><span data-lang-ko>한국생활, 앱 하나로 시작</span><span data-lang-en>Start with one app</span></h2>
+      <p><span data-lang-ko>도착부터 송금까지, 모국어로 함께합니다.</span><span data-lang-en>From arrival to remittance, in your language.</span></p>
+      <a class="btn btn--light" href="download.html"><span data-lang-ko>앱 다운로드</span><span data-lang-en>Get the app</span> →</a>
+    </div></div></section>
+  </main>
+
+  <footer class="ft"><div class="wrap ft__grid">
+    <div><img src="assets/img/horizontal-remit.svg" alt="MoneyBox Remit" /><p class="ft__tag"><span data-lang-ko>한국에 온 그날부터 정착까지.</span><span data-lang-en>From day one to settling in.</span></p><p style="margin-top:10px;font-size:14px"><span data-lang-ko>고객센터</span><span data-lang-en>Contact</span> <a href="tel:02-771-0000" class="ft__call" style="display:inline">02-771-0000</a></p></div>
+    <div><h4><span data-lang-ko>서비스</span><span data-lang-en>Services</span></h4><a href="v2.html">해외송금</a><a href="#">환전</a><a href="#">행정사</a><a href="#">유심</a><a href="#">보험</a></div>
+    <div><h4><span data-lang-ko>안내</span><span data-lang-en>Help</span></h4><a href="support.html">고객지원</a><a href="rates.html">요금</a><a href="security.html">보안</a></div>
+    <div><h4>More</h4><a href="https://moneyboxremit.github.io/remit/" target="_blank" rel="noopener">송금 설명서</a><a href="branches.html">지점</a></div>
+  </div><div class="wrap ft__bot"><span>© 2026 MoneyBox Remit.</span><span data-lang-ko>초안2 (검토용)</span><span data-lang-en>Draft 2</span></div></footer>
+  <span style="position:fixed;right:14px;bottom:14px;z-index:60;background:#101828;color:#fff;border-radius:999px;font-size:12px;font-weight:700;padding:8px 14px;box-shadow:var(--shadow-lg)">🅱 초안 2 · 한국생활 여정</span>
+  <script src="assets/js/v2.js" defer></script>
+</body>
+</html>

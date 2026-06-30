@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>머니박스레밋 — 외국인 한국생활 올인원 (초안1)</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/symbol.svg" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/css/v2.css" />
+  <style>
+    .heroP{position:relative;overflow:hidden;background:radial-gradient(1100px 560px at 12% -10%,#15336e 0,transparent 60%),radial-gradient(820px 440px at 100% 0,#0e8d83 0,transparent 55%),linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;padding:70px 0 60px;text-align:center}
+    .heroP h1{font-size:46px;font-weight:900;letter-spacing:-1.4px;line-height:1.14;margin:14px 0 14px}
+    .heroP h1 .hl{background:linear-gradient(120deg,#7ab0ff,var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .heroP p{color:#c4d0e6;font-size:18px;max-width:620px;margin:0 auto}
+    .langbar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+    .langbar span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 13px;font-size:13px;font-weight:700;color:#dbe7ff}
+    .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .svc .big{grid-column:span 3}
+    @media(max-width:920px){.svc{grid-template-columns:1fr}.svc .big{grid-column:auto}.heroP h1{font-size:34px}}
+    .scard{display:block;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;transition:transform .18s,box-shadow .18s,border-color .18s}
+    .scard:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:#cfe0ff}
+    .scard .ic{width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;background:linear-gradient(135deg,#eaf1ff,#def6f3);margin-bottom:14px}
+    .scard h3{font-size:20px;font-weight:900;margin-bottom:6px}
+    .scard p{color:var(--soft);font-size:14.5px}
+    .scard .tag{display:inline-block;margin-top:12px;color:var(--brand);font-weight:800;font-size:14px}
+    .scard.feat{background:linear-gradient(135deg,#13294f,#1a6dff);color:#fff;border:none}
+    .scard.feat .ic{background:rgba(255,255,255,.16)}
+    .scard.feat p{color:#cfe0ff}.scard.feat .tag{color:#fff}
+  </style>
+</head>
+<body>
+  <header class="hdr"><div class="wrap hdr__in">
+    <a class="logo" href="#"><img src="assets/img/horizontal-remit.svg" alt="MoneyBox Remit" /></a>
+    <nav class="nav">
+      <a href="#svc"><span data-lang-ko>서비스</span><span data-lang-en>Services</span></a>
+      <a href="v2.html"><span data-lang-ko>해외송금</span><span data-lang-en>Remittance</span></a>
+      <a href="#why"><span data-lang-ko>왜 우리</span><span data-lang-en>Why us</span></a>
+    </nav>
+    <div class="hdr__act">
+      <button class="lang" id="langBtn" type="button">EN</button>
+      <a class="btn btn--primary btn--sm" href="download.html"><span data-lang-ko>앱 다운로드</span><span data-lang-en>Download</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴">&#9776;</button>
+    </div>
+  </div></header>
+  <div class="mnav" id="mnav"><div class="mnav__p"><button class="mnav__x" id="mnavX">&times;</button>
+    <a href="#svc">서비스</a><a href="v2.html">해외송금</a><a href="#why">왜 우리</a><a href="download.html">앱 다운로드</a></div></div>
+
+  <section class="heroP"><div class="wrap">
+    <span class="eyebrow" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;color:#dbe7ff"><span style="width:7px;height:7px;border-radius:50%;background:var(--mint)"></span><span data-lang-ko>외국인을 위한 한국생활 포털</span><span data-lang-en>Your life-in-Korea portal</span></span>
+    <h1><span data-lang-ko>한국 생활, <span class="hl">하나로</span><br />송금부터 보험까지</span><span data-lang-en>Life in Korea, <span class="hl">all in one</span><br />remittance to insurance</span></h1>
+    <p><span data-lang-ko>해외송금·환전·행정사·유심·보험 — 외국인에게 꼭 필요한 서비스를 한곳에서.</span><span data-lang-en>Remittance, exchange, visa, SIM, insurance — everything in one place.</span></p>
+    <div class="langbar"><span>한국어</span><span>English</span><span>Tiếng Việt</span><span>नेपाली</span><span>中文</span><span>+</span></div>
+  </div></section>
+
+  <main>
+    <section class="sec" id="svc"><div class="wrap">
+      <div class="shead"><span class="ey"><span data-lang-ko>서비스</span><span data-lang-en>Services</span></span><h2><span data-lang-ko>필요한 모든 것</span><span data-lang-en>Everything you need</span></h2></div>
+      <div class="svc">
+        <a class="scard feat big" href="v2.html">
+          <div class="ic">💸</div>
+          <h3><span data-lang-ko>해외송금</span><span data-lang-en>Remittance</span></h3>
+          <p><span data-lang-ko>32개국으로 빠르고 안전하게. 보통 10분~1시간*, 모국어 지원, 정직한 환율·수수료.</span><span data-lang-en>To 32 countries, fast &amp; safe. ~10min–1h*, your language, honest rates.</span></p>
+          <span class="tag"><span data-lang-ko>송금 시작 →</span><span data-lang-en>Start sending →</span></span>
+        </a>
+        <a class="scard" href="#"><div class="ic">💱</div><h3><span data-lang-ko>환전</span><span data-lang-en>Exchange</span></h3><p><span data-lang-ko>주요 통화 환전을 편리하게.</span><span data-lang-en>Convenient currency exchange.</span></p><span class="tag"><span data-lang-ko>안내 예정</span><span data-lang-en>Coming</span></span></a>
+        <a class="scard" href="#"><div class="ic">📋</div><h3><span data-lang-ko>행정사</span><span data-lang-en>Visa &amp; Admin</span></h3><p><span data-lang-ko>비자·체류·행정 업무 지원.</span><span data-lang-en>Visa, stay &amp; admin support.</span></p><span class="tag"><span data-lang-ko>안내 예정</span><span data-lang-en>Coming</span></span></a>
+        <a class="scard" href="#"><div class="ic">📱</div><h3><span data-lang-ko>유심(USIM)</span><span data-lang-en>SIM Card</span></h3><p><span data-lang-ko>한국 도착 즉시 개통 가능한 유심.</span><span data-lang-en>Get connected on arrival.</span></p><span class="tag"><span data-lang-ko>안내 예정</span><span data-lang-en>Coming</span></span></a>
+        <a class="scard" href="#"><div class="ic">🛡️</div><h3><span data-lang-ko>보험</span><span data-lang-en>Insurance</span></h3><p><span data-lang-ko>체류 외국인을 위한 보험 안내.</span><span data-lang-en>Insurance for residents.</span></p><span class="tag"><span data-lang-ko>안내 예정</span><span data-lang-en>Coming</span></span></a>
+        <a class="scard" href="support.html"><div class="ic">💬</div><h3><span data-lang-ko>고객지원</span><span data-lang-en>Support</span></h3><p><span data-lang-ko>모국어로 도와드려요.</span><span data-lang-en>Help in your language.</span></p><span class="tag"><span data-lang-ko>문의 →</span><span data-lang-en>Contact →</span></span></a>
+      </div>
+      <div class="warn" style="max-width:760px;margin:18px auto 0"><span data-lang-ko>※ 환전·행정사·유심·보험은 그룹 서비스로, 안내 페이지는 순차 연결 예정입니다.</span><span data-lang-en>※ Exchange/visa/SIM/insurance pages coming soon.</span></div>
+    </div></section>
+
+    <section class="sec sec--alt" id="why"><div class="wrap">
+      <div class="shead"><span class="ey"><span data-lang-ko>왜 우리</span><span data-lang-en>Why us</span></span><h2><span data-lang-ko>외국인이 믿는 이유</span><span data-lang-en>Why foreigners trust us</span></h2></div>
+      <div class="grid3">
+        <div class="card"><div class="ic ic--solid">🌏</div><h3><span data-lang-ko>모국어 지원</span><span data-lang-en>Your language</span></h3><p><span data-lang-ko>여러 언어로 쉽게 안내.</span><span data-lang-en>Easy in many languages.</span></p></div>
+        <div class="card"><div class="ic ic--solid">🛡️</div><h3><span data-lang-ko>정식 등록</span><span data-lang-en>Licensed</span></h3><p><span data-lang-ko>기재부 등록 소액해외송금업체.</span><span data-lang-en>Licensed remittance operator.</span></p></div>
+        <div class="card"><div class="ic ic--solid">⚡</div><h3><span data-lang-ko>한곳에서 빠르게</span><span data-lang-en>All in one</span></h3><p><span data-lang-ko>흩어진 일을 앱 하나로.</span><span data-lang-en>One app for everything.</span></p></div>
+      </div>
+    </div></section>
+
+    <section class="sec" style="padding-top:0"><div class="wrap"><div class="ctaband">
+      <h2><span data-lang-ko>한국 생활, 지금 시작하세요</span><span data-lang-en>Start your life in Korea</span></h2>
+      <p><span data-lang-ko>앱 하나로 송금부터 정착까지.</span><span data-lang-en>From sending money to settling in.</span></p>
+      <a class="btn btn--light" href="download.html"><span data-lang-ko>앱 다운로드</span><span data-lang-en>Get the app</span> →</a>
+    </div></div></section>
+  </main>
+
+  <footer class="ft"><div class="wrap ft__grid">
+    <div><img src="assets/img/horizontal-remit.svg" alt="MoneyBox Remit" /><p class="ft__tag"><span data-lang-ko>외국인을 위한 한국생활 올인원.</span><span data-lang-en>All-in-one for life in Korea.</span></p><p style="margin-top:10px;font-size:14px"><span data-lang-ko>고객센터</span><span data-lang-en>Contact</span> <a href="tel:02-771-0000" class="ft__call" style="display:inline">02-771-0000</a></p></div>
+    <div><h4><span data-lang-ko>서비스</span><span data-lang-en>Services</span></h4><a href="v2.html">해외송금</a><a href="#">환전</a><a href="#">행정사</a><a href="#">유심</a><a href="#">보험</a></div>
+    <div><h4><span data-lang-ko>안내</span><span data-lang-en>Help</span></h4><a href="support.html">고객지원</a><a href="rates.html">요금</a><a href="security.html">보안</a></div>
+    <div><h4>More</h4><a href="https://moneyboxremit.github.io/remit/" target="_blank" rel="noopener">송금 설명서</a><a href="branches.html">지점</a></div>
+  </div><div class="wrap ft__bot"><span>© 2026 MoneyBox Remit.</span><span data-lang-ko>초안1 (검토용) · *도착시간 상이</span><span data-lang-en>Draft 1 · *arrival varies</span></div></footer>
+  <span style="position:fixed;right:14px;bottom:14px;z-index:60;background:#101828;color:#fff;border-radius:999px;font-size:12px;font-weight:700;padding:8px 14px;box-shadow:var(--shadow-lg)">🅰 초안 1 · 원스톱 그리드</span>
+  <script src="assets/js/v2.js" defer></script>
+</body>
+</html>
